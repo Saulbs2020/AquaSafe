@@ -1,7 +1,109 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Greek Odyssey Travel</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Orbitron', sans-serif;
+        background: #0b132b;
+        color: white;
+    }
+    header {
+        padding: 30px;
+        text-align: center;
+        background: #1c2541;
+    }
+    h1 {
+        margin: 0;
+        font-size: 36px;
+    }
+    nav {
+        text-align: center;
+        padding: 15px;
+        background: #3a506b;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+    main {
+        padding: 40px;
+        text-align: center;
+    }
+    .hero {
+        padding: 80px 20px;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url("https://images.unsplash.com/photo-1530841377377-3ff06c0ca713")
+        center/cover;
+    }
+    .hero h2 {
+        font-size: 42px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    button {
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        background: #5bc0be;
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #3aafa9;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #1c2541;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Greek Odyssey Travel</h1>
+    <p>Discover the beauty of Greece</p>
+</header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#about">About</a>
+</nav>
+<main id="home">
+    <section class="hero">
+        <h2>Begin Your Greek Odyssey</h2>
+        <p>Explore ancient ruins, beautiful islands, and unforgettable adventures.</p>
+        <button onclick="alert('Your Greek Odyssey begins now!')">
+            Start Exploring
+        </button>
+    </section>
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <p>Athens • Santorini • Mykonos • Crete</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Greek Odyssey Travel helps travelers discover the history,
+            culture, and natural beauty of Greece.
+        </p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 Greek Odyssey Travel</p>
+</footer>
+</body>
+</html>
