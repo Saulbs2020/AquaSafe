@@ -538,17 +538,48 @@
     </section>
     <!-- CONTACTO -->
     <section class="contact" id="contacto">
-        <h2 class="section-title">
-            Protege tu futuro
-        </h2>
-        <p>
-            ¿Quieres conocer más sobre las opciones de protección?
-        </p>
-        <button class="button" onclick="showMessage()">
-            COTIZA TU SEGURO
-        </button>
-        <p id="contact-message"></p>
-    </section>
+<h2 class="section-title">
+    Protege tu futuro
+</h2>
+<p>
+    Completa el siguiente formulario para solicitar una cotización ficticia.
+</p>
+<form id="quote-form">
+    <input
+        type="text"
+        id="name"
+        placeholder="Tu nombre"
+        required
+    >
+    <input
+        type="email"
+        id="email"
+        placeholder="Tu correo electrónico"
+        required
+    >
+    <select id="insurance" required>
+        <option value="">
+            Selecciona un tipo de seguro
+        </option>
+        <option value="vivienda">
+            Seguro para vivienda
+        </option>
+        <option value="inundaciones">
+            Protección contra inundaciones
+        </option>
+        <option value="deslizamientos">
+            Protección contra deslizamientos
+        </option>
+    </select>
+    <button
+        type="submit"
+        class="button"
+    >
+        COTIZA TU SEGURO
+    </button>
+</form>
+<div id="quote-result"></div>
+</section>
     <!-- MENSAJE FINAL -->
     <section class="final-message">
         <h2>
