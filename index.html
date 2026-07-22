@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prevención de Inundaciones y Deslizamientos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProtegeFuturo Seguros</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 <style>
     * {
@@ -18,6 +18,7 @@
         background: #07111f;
         color: white;
     }
+    /* MENÚ */
     header {
         position: fixed;
         top: 0;
@@ -27,22 +28,25 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 50px;
-        background: rgba(7, 17, 31, 0.9);
+        background: rgba(7, 17, 31, 0.92);
         backdrop-filter: blur(10px);
     }
     .logo {
         font-size: 20px;
         font-weight: 600;
+        color: #5bc0be;
     }
     nav a {
         color: white;
         text-decoration: none;
-        margin-left: 20px;
-        font-size: 13px;
+        margin-left: 18px;
+        font-size: 12px;
+        transition: 0.3s;
     }
     nav a:hover {
         color: #5bc0be;
     }
+    /* HERO */
     .hero {
         min-height: 100vh;
         display: flex;
@@ -53,8 +57,8 @@
         padding: 120px 20px 80px;
         background:
             linear-gradient(
-                rgba(0, 0, 0, 0.5),
-                rgba(0, 0, 0, 0.8)
+                rgba(0, 0, 0, 0.55),
+                rgba(0, 0, 0, 0.85)
             ),
             url("https://images.unsplash.com/photo-1547683905-f686c993aae5")
             center/cover;
@@ -64,10 +68,12 @@
         margin: 0 0 20px;
     }
     .hero p {
-        max-width: 750px;
+        max-width: 800px;
         font-size: 18px;
         line-height: 1.8;
+        color: #d2dce8;
     }
+    /* BOTONES */
     .button {
         margin-top: 25px;
         padding: 15px 30px;
@@ -76,6 +82,8 @@
         background: #5bc0be;
         color: white;
         font-family: 'Orbitron', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
         transition: 0.3s;
     }
@@ -83,6 +91,7 @@
         background: #3aafa9;
         transform: scale(1.05);
     }
+    /* SECCIONES */
     section {
         padding: 100px 8%;
     }
@@ -99,6 +108,10 @@
         line-height: 1.9;
         font-size: 16px;
     }
+    /* COLORES */
+    .company {
+        background: #0d1929;
+    }
     .climate {
         background: #0d1929;
     }
@@ -114,9 +127,22 @@
     .sustainable {
         background: #0d1929;
     }
-    .action {
+    .comparison {
         background: #14263d;
     }
+    .financial {
+        background: #0d1929;
+    }
+    .contact {
+        background: #14263d;
+    }
+    .action {
+        background: #0d1929;
+    }
+    .final-message {
+        background: #07111f;
+    }
+    /* LISTAS */
     ul {
         max-width: 950px;
         margin: auto;
@@ -139,56 +165,143 @@
         color: #5bc0be;
         font-weight: bold;
     }
+    /* COMPARACIÓN */
+    .comparison-container {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    .comparison-card {
+        padding: 30px;
+        border-radius: 15px;
+        background: #101d30;
+    }
+    .comparison-card h3 {
+        text-align: center;
+        color: #5bc0be;
+        margin-top: 0;
+    }
+    .comparison-card ul {
+        list-style: none;
+    }
+    .comparison-card li {
+        background: #18283d;
+    }
+    /* CONTACTO */
+    .contact {
+        text-align: center;
+    }
+    .contact p {
+        color: #c2cedb;
+        line-height: 1.8;
+    }
+    #contact-message {
+        margin-top: 25px;
+        color: #5bc0be;
+        font-weight: bold;
+    }
+    /* MENSAJE FINAL */
+    .final-message {
+        text-align: center;
+    }
+    .final-message h2 {
+        font-size: clamp(25px, 5vw, 45px);
+        color: #5bc0be;
+    }
+    .final-message p {
+        max-width: 750px;
+        margin: auto;
+        color: #c2cedb;
+        line-height: 1.8;
+    }
+    /* FOOTER */
     footer {
         padding: 30px;
         text-align: center;
         background: #050b14;
         color: #8795a8;
     }
-    @media (max-width: 700px) {
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
         header {
             flex-direction: column;
             gap: 15px;
             padding: 15px;
         }
+        nav {
+            text-align: center;
+        }
         nav a {
-            margin: 0 5px;
+            margin: 5px;
             font-size: 10px;
         }
+    }
+    @media (max-width: 600px) {
         section {
             padding: 80px 6%;
+        }
+        .hero h1 {
+            font-size: 40px;
+        }
+        .hero p {
+            font-size: 15px;
         }
     }
 </style>
 </head>
 <body>
+<!-- MENÚ DE NAVEGACIÓN -->
 <header>
     <div class="logo">
-        PREVENCIÓN Y SEGURIDAD
+        PROTEGEFUTURO
     </div>
     <nav>
         <a href="#inicio">Inicio</a>
-        <a href="#problema">Problema</a>
-        <a href="#clima">Cambio Climático</a>
+        <a href="#empresa">La empresa</a>
+        <a href="#problema">Riesgos</a>
         <a href="#consecuencias">Consecuencias</a>
         <a href="#prevencion">Prevención</a>
-        <a href="#sostenibles">Prácticas Sostenibles</a>
-        <a href="#accion">Acción</a>
+        <a href="#comparacion">Comparación</a>
+        <a href="#sostenibles">Sostenibilidad</a>
+        <a href="#contacto">Cotiza tu seguro</a>
     </nav>
 </header>
 <main>
+    <!-- INICIO -->
     <section class="hero" id="inicio">
         <h1>
-            Inundaciones y Deslizamientos
+            Protege tu futuro
         </h1>
         <p>
-            Conocer los riesgos y aprender a prevenirlos puede ayudar
-            a proteger a las personas, las viviendas y las comunidades.
+            Las inundaciones y los deslizamientos pueden afectar viviendas,
+            familias y comunidades. Informarte, prevenir y contar con opciones
+            de protección puede ayudarte a estar mejor preparado.
         </p>
-        <button class="button" onclick="scrollToProblem()">
-            CONOCER MÁS
+        <button class="button" onclick="scrollToCompany()">
+            CONOCE PROTEGEFUTURO
         </button>
     </section>
+    <!-- EMPRESA -->
+    <section class="company" id="empresa">
+        <h2 class="section-title">
+            ProtegeFuturo Seguros
+        </h2>
+        <div class="content">
+            <p>
+                Somos una aseguradora ficticia comprometida con ayudar a las
+                familias y comunidades a prepararse ante los riesgos causados
+                por inundaciones, deslizamientos y lluvias intensas.
+            </p>
+            <p>
+                Nuestro objetivo es brindar información y opciones de protección
+                para que las personas puedan tomar decisiones responsables y
+                proteger sus viviendas y bienes.
+            </p>
+        </div>
+    </section>
+    <!-- PROBLEMA -->
     <section id="problema">
         <h2 class="section-title">
             ¿Qué son las inundaciones y los deslizamientos?
@@ -208,6 +321,7 @@
             </p>
         </div>
     </section>
+    <!-- CAMBIO CLIMÁTICO -->
     <section class="climate" id="clima">
         <h2 class="section-title">
             Cambio climático y lluvias intensas
@@ -234,6 +348,7 @@
             </p>
         </div>
     </section>
+    <!-- CONSECUENCIAS SOCIALES -->
     <section class="consequences" id="consecuencias">
         <h2 class="section-title">
             Consecuencias sociales
@@ -256,6 +371,7 @@
             </li>
         </ul>
     </section>
+    <!-- CONSECUENCIAS ECONÓMICAS -->
     <section class="economic">
         <h2 class="section-title">
             Consecuencias económicas
@@ -278,6 +394,7 @@
             </li>
         </ul>
     </section>
+    <!-- PREVENCIÓN -->
     <section class="prevention" id="prevencion">
         <h2 class="section-title">
             Prevención
@@ -297,6 +414,7 @@
             </p>
         </div>
     </section>
+    <!-- PRÁCTICAS SOSTENIBLES -->
     <section class="sustainable" id="sostenibles">
         <h2 class="section-title">
             Prácticas sostenibles
@@ -324,6 +442,78 @@
             </li>
         </ul>
     </section>
+    <!-- COMPARACIÓN -->
+    <section class="comparison" id="comparacion">
+        <h2 class="section-title">
+            ¿Estás preparado para un desastre?
+        </h2>
+        <div class="comparison-container">
+            <div class="comparison-card">
+                <h3>
+                    Con un seguro
+                </h3>
+                <ul>
+                    <li>
+                        Posible apoyo económico para reparar daños,
+                        según las condiciones de la póliza.
+                    </li>
+                    <li>
+                        Mayor preparación ante situaciones inesperadas.
+                    </li>
+                    <li>
+                        Protección de parte de tus bienes y vivienda.
+                    </li>
+                    <li>
+                        Mayor tranquilidad para tu familia.
+                    </li>
+                </ul>
+            </div>
+            <div class="comparison-card">
+                <h3>
+                    Sin un seguro
+                </h3>
+                <ul>
+                    <li>
+                        La familia debe asumir todos los costos de reparación.
+                    </li>
+                    <li>
+                        Los daños pueden causar grandes pérdidas económicas.
+                    </li>
+                    <li>
+                        Puede ser más difícil recuperar los bienes perdidos.
+                    </li>
+                    <li>
+                        Los gastos inesperados pueden afectar la economía familiar.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- ARGUMENTOS FINANCIEROS -->
+    <section class="financial">
+        <h2 class="section-title">
+            Protege tu economía
+        </h2>
+        <div class="content">
+            <p>
+                Una inundación o un deslizamiento puede causar daños costosos
+                en una vivienda, un vehículo o diferentes pertenencias. Los
+                gastos de reparación pueden representar una gran carga económica
+                para una familia.
+            </p>
+            <p>
+                Contar con un seguro de vivienda puede ayudar a cubrir parte
+                de los daños materiales ocasionados por estos eventos, siempre
+                de acuerdo con las condiciones y coberturas establecidas en
+                la póliza.
+            </p>
+            <p>
+                Prepararse con anticipación puede ser una decisión financiera
+                responsable para reducir el impacto económico de una emergencia.
+            </p>
+        </div>
+    </section>
+    <!-- LLAMADO A LA ACCIÓN -->
     <section class="action" id="accion">
         <h2 class="section-title">
             Llamado a la acción para la comunidad
@@ -331,34 +521,69 @@
         <ul>
             <li>
                 <strong>Prepara tu plan familiar de emergencia:</strong>
-                Elabora junto a tu familia e identifica un plan de evacuación claro
-                hacia refugios o zonas seguras ante alertas por lluvias intensas.
+                Elabora junto a tu familia un plan de evacuación claro hacia
+                refugios o zonas seguras ante alertas por lluvias intensas.
             </li>
             <li>
                 <strong>Mantente informado y alerta:</strong>
-                Sigue atentamente los reportes meteorológicos y las alertas oficiales
-                emitidas por los cuerpos de emergencia.
+                Sigue atentamente los reportes meteorológicos y las alertas
+                oficiales emitidas por los cuerpos de emergencia.
             </li>
             <li>
                 <strong>Cuida tu entorno:</strong>
-                No arrojes basura en la calle ni en los ríos; la prevención del riesgo
-                es una responsabilidad de todos.
+                No arrojes basura en la calle ni en los ríos; la prevención
+                del riesgo es una responsabilidad de todos.
             </li>
         </ul>
     </section>
+    <!-- CONTACTO -->
+    <section class="contact" id="contacto">
+        <h2 class="section-title">
+            Protege tu futuro
+        </h2>
+        <p>
+            ¿Quieres conocer más sobre las opciones de protección?
+        </p>
+        <button class="button" onclick="showMessage()">
+            COTIZA TU SEGURO
+        </button>
+        <p id="contact-message"></p>
+    </section>
+    <!-- MENSAJE FINAL -->
+    <section class="final-message">
+        <h2>
+            Prepárate hoy para proteger el mañana.
+        </h2>
+        <p>
+            La prevención es responsabilidad de todos. Infórmate, prepara
+            a tu familia y considera opciones que puedan ayudarte a proteger
+            tu hogar y tu futuro.
+        </p>
+    </section>
 </main>
+<!-- PIE DE PÁGINA -->
 <footer>
     <p>
-        © 2026 Prevención de Inundaciones y Deslizamientos
+        © 2026 ProtegeFuturo Seguros
+    </p>
+    <p>
+        Proyecto educativo ficticio
     </p>
 </footer>
+<!-- JAVASCRIPT -->
 <script>
-    function scrollToProblem() {
+    function scrollToCompany() {
         document
-            .getElementById("problema")
+            .getElementById("empresa")
             .scrollIntoView({
                 behavior: "smooth"
             });
+    }
+    function showMessage() {
+        document
+            .getElementById("contact-message")
+            .textContent =
+            "¡Gracias por tu interés! Esta es una sección ficticia de cotización. En una aseguradora real, aquí podrías solicitar información sobre las coberturas disponibles.";
     }
 </script>
 </body>
