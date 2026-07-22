@@ -99,27 +99,6 @@
         line-height: 1.9;
         font-size: 16px;
     }
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-    }
-    .card {
-        padding: 25px;
-        border-radius: 15px;
-        background: #101d30;
-        transition: transform 0.3s;
-    }
-    .card:hover {
-        transform: translateY(-8px);
-    }
-    .card h3 {
-        color: #5bc0be;
-    }
-    .card p {
-        color: #c2cedb;
-        line-height: 1.7;
-    }
     .climate {
         background: #0d1929;
     }
@@ -132,8 +111,14 @@
     .prevention {
         background: #14263d;
     }
+    .sustainable {
+        background: #0d1929;
+    }
+    .action {
+        background: #14263d;
+    }
     ul {
-        max-width: 850px;
+        max-width: 950px;
         margin: auto;
         padding: 0;
         list-style: none;
@@ -141,10 +126,13 @@
     li {
         background: #101d30;
         margin: 15px 0;
-        padding: 18px 25px;
+        padding: 20px 25px;
         border-radius: 10px;
         color: #c2cedb;
-        line-height: 1.6;
+        line-height: 1.7;
+    }
+    li strong {
+        color: #5bc0be;
     }
     li::before {
         content: "✓ ";
@@ -184,6 +172,8 @@
         <a href="#clima">Cambio Climático</a>
         <a href="#consecuencias">Consecuencias</a>
         <a href="#prevencion">Prevención</a>
+        <a href="#sostenibles">Prácticas Sostenibles</a>
+        <a href="#accion">Acción</a>
     </nav>
 </header>
 <main>
@@ -306,6 +296,55 @@
                 los riesgos.
             </p>
         </div>
+    </section>
+    <section class="sustainable" id="sostenibles">
+        <h2 class="section-title">
+            Prácticas sostenibles
+        </h2>
+        <ul>
+            <li>
+                <strong>Limpieza comunitaria de cauces y ríos:</strong>
+                Organizar jornadas para recolectar basura y evitar la acumulación
+                de desechos en caños y desagües que obstruyan el paso del agua.
+            </li>
+            <li>
+                <strong>Reforestación y siembra de árboles:</strong>
+                Plantar vegetación en zonas vulnerables y pendientes para devolverle
+                estabilidad al suelo y reducir el riesgo de deslizamientos.
+            </li>
+            <li>
+                <strong>Uso responsable del suelo y construcción consciente:</strong>
+                Evitar la edificación o el desarrollo urbano en terrenos de alto riesgo
+                o laderas inestables.
+            </li>
+            <li>
+                <strong>Manejo adecuado de residuos:</strong>
+                Reducir la contaminación ambiental asegurando que la basura no termine
+                en las fuentes hídricas de la comunidad.
+            </li>
+        </ul>
+    </section>
+    <section class="action" id="accion">
+        <h2 class="section-title">
+            Llamado a la acción para la comunidad
+        </h2>
+        <ul>
+            <li>
+                <strong>Prepara tu plan familiar de emergencia:</strong>
+                Elabora junto a tu familia e identifica un plan de evacuación claro
+                hacia refugios o zonas seguras ante alertas por lluvias intensas.
+            </li>
+            <li>
+                <strong>Mantente informado y alerta:</strong>
+                Sigue atentamente los reportes meteorológicos y las alertas oficiales
+                emitidas por los cuerpos de emergencia.
+            </li>
+            <li>
+                <strong>Cuida tu entorno:</strong>
+                No arrojes basura en la calle ni en los ríos; la prevención del riesgo
+                es una responsabilidad de todos.
+            </li>
+        </ul>
     </section>
 </main>
 <footer>
