@@ -18,7 +18,6 @@
         background: #07111f;
         color: white;
     }
-    /* MENÚ */
     header {
         position: fixed;
         top: 0;
@@ -39,14 +38,13 @@
     nav a {
         color: white;
         text-decoration: none;
-        margin-left: 18px;
-        font-size: 12px;
+        margin-left: 15px;
+        font-size: 11px;
         transition: 0.3s;
     }
     nav a:hover {
         color: #5bc0be;
     }
-    /* HERO */
     .hero {
         min-height: 100vh;
         display: flex;
@@ -73,7 +71,6 @@
         line-height: 1.8;
         color: #d2dce8;
     }
-    /* BOTONES */
     .button {
         margin-top: 25px;
         padding: 15px 30px;
@@ -91,7 +88,6 @@
         background: #3aafa9;
         transform: scale(1.05);
     }
-    /* SECCIONES */
     section {
         padding: 100px 8%;
     }
@@ -108,41 +104,26 @@
         line-height: 1.9;
         font-size: 16px;
     }
-    /* COLORES */
-    .company {
+    .company,
+    .climate,
+    .economic,
+    .financial,
+    .contact {
         background: #0d1929;
     }
-    .climate {
-        background: #0d1929;
-    }
-    .consequences {
-        background: #14263d;
-    }
-    .economic {
-        background: #0d1929;
-    }
-    .prevention {
+    .consequences,
+    .prevention,
+    .comparison,
+    .action {
         background: #14263d;
     }
     .sustainable {
         background: #0d1929;
     }
-    .comparison {
-        background: #14263d;
-    }
-    .financial {
-        background: #0d1929;
-    }
-    .contact {
-        background: #14263d;
-    }
-    .action {
-        background: #0d1929;
-    }
     .final-message {
         background: #07111f;
+        text-align: center;
     }
-    /* LISTAS */
     ul {
         max-width: 950px;
         margin: auto;
@@ -165,46 +146,76 @@
         color: #5bc0be;
         font-weight: bold;
     }
-    /* COMPARACIÓN */
-    .comparison-container {
-        max-width: 1000px;
+    .comparison-container,
+    .insurance-container {
+        max-width: 1100px;
         margin: auto;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
     }
-    .comparison-card {
+    .comparison-card,
+    .insurance-card {
         padding: 30px;
         border-radius: 15px;
         background: #101d30;
     }
-    .comparison-card h3 {
+    .comparison-card h3,
+    .insurance-card h3 {
         text-align: center;
         color: #5bc0be;
         margin-top: 0;
     }
-    .comparison-card ul {
-        list-style: none;
-    }
-    .comparison-card li {
-        background: #18283d;
-    }
-    /* CONTACTO */
-    .contact {
-        text-align: center;
-    }
-    .contact p {
+    .insurance-card p {
         color: #c2cedb;
         line-height: 1.8;
     }
-    #contact-message {
+    .insurance-card strong {
+        color: white;
+    }
+    .price {
+        margin: 25px auto;
+        padding: 20px;
+        max-width: 300px;
+        border-radius: 12px;
+        background: #14263d;
+        color: #5bc0be;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .persuasive-message {
+        margin: 30px 0;
+        padding: 20px;
+        border-left: 4px solid #5bc0be;
+        background: #14263d;
+        color: #c2cedb;
+        font-style: italic;
+        line-height: 1.8;
+    }
+    .quote-box {
+        max-width: 650px;
+        margin: 50px auto 0;
+        padding: 35px;
+        text-align: center;
+        background: #101d30;
+        border-radius: 15px;
+    }
+    .quote-box select {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        background: #18283d;
+        color: white;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 14px;
+    }
+    #quote-message {
         margin-top: 25px;
         color: #5bc0be;
         font-weight: bold;
-    }
-    /* MENSAJE FINAL */
-    .final-message {
-        text-align: center;
+        line-height: 1.7;
     }
     .final-message h2 {
         font-size: clamp(25px, 5vw, 45px);
@@ -216,14 +227,12 @@
         color: #c2cedb;
         line-height: 1.8;
     }
-    /* FOOTER */
     footer {
         padding: 30px;
         text-align: center;
         background: #050b14;
         color: #8795a8;
     }
-    /* RESPONSIVE */
     @media (max-width: 900px) {
         header {
             flex-direction: column;
@@ -252,7 +261,6 @@
 </style>
 </head>
 <body>
-<!-- MENÚ DE NAVEGACIÓN -->
 <header>
     <div class="logo">
         PROTEGEFUTURO
@@ -265,11 +273,11 @@
         <a href="#prevencion">Prevención</a>
         <a href="#comparacion">Comparación</a>
         <a href="#sostenibles">Sostenibilidad</a>
-        <a href="#contacto">Cotiza tu seguro</a>
+        <a href="#seguros">Seguros</a>
+        <a href="#contacto">Cotiza</a>
     </nav>
 </header>
 <main>
-    <!-- INICIO -->
     <section class="hero" id="inicio">
         <h1>
             Protege tu futuro
@@ -280,19 +288,18 @@
             de protección puede ayudarte a estar mejor preparado.
         </p>
         <button class="button" onclick="scrollToCompany()">
-            CONOCE PROTEGEFUTURO
+            CONOCE NUESTRA ASEGURADORA
         </button>
     </section>
-    <!-- EMPRESA -->
     <section class="company" id="empresa">
         <h2 class="section-title">
             ProtegeFuturo Seguros
         </h2>
         <div class="content">
             <p>
-                Somos una aseguradora ficticia comprometida con ayudar a las
-                familias y comunidades a prepararse ante los riesgos causados
-                por inundaciones, deslizamientos y lluvias intensas.
+                ProtegeFuturo Seguros es una aseguradora ficticia comprometida
+                con ayudar a las familias y comunidades a prepararse ante los
+                riesgos causados por inundaciones, deslizamientos y lluvias intensas.
             </p>
             <p>
                 Nuestro objetivo es brindar información y opciones de protección
@@ -301,7 +308,6 @@
             </p>
         </div>
     </section>
-    <!-- PROBLEMA -->
     <section id="problema">
         <h2 class="section-title">
             ¿Qué son las inundaciones y los deslizamientos?
@@ -314,15 +320,13 @@
                 perder estabilidad, provocando deslizamientos de tierra.
             </p>
             <p>
-                Estos fenómenos pueden causar daños en viviendas, carreteras,
-                ecosistemas y poner en riesgo la vida de las personas. Además,
-                la contaminación y la acumulación de basura pueden afectar los ríos
-                y empeorar estos problemas.
+                Esto puede causar daños en viviendas, carreteras, ecosistemas y
+                poner en riesgo la vida de las personas. Además, la contaminación
+                y la acumulación de basura pueden afectar los ríos y empeorar estos problemas.
             </p>
         </div>
     </section>
-    <!-- CAMBIO CLIMÁTICO -->
-    <section class="climate" id="clima">
+    <section class="climate">
         <h2 class="section-title">
             Cambio climático y lluvias intensas
         </h2>
@@ -331,24 +335,20 @@
                 El cambio climático ha provocado que las lluvias intensas sean
                 más frecuentes y fuertes. Estas precipitaciones pueden causar
                 inundaciones, desbordamiento de ríos y deslizamientos de tierra,
-                lo que daña viviendas, carreteras, cultivos e infraestructura.
+                dañando viviendas, carreteras, cultivos e infraestructura.
             </p>
             <p>
                 En muchos casos, las familias deben desplazarse de sus hogares
                 porque las zonas afectadas dejan de ser seguras o porque sus casas
-                quedan destruidas. Estos desplazamientos pueden ser temporales o
-                permanentes y generan pérdidas económicas, problemas de salud y
-                dificultades para acceder a servicios básicos.
+                quedan destruidas.
             </p>
             <p>
                 Por esta razón, contar con un seguro de vivienda puede ayudar a
-                cubrir parte de los daños materiales ocasionados por las inundaciones
-                y otros eventos relacionados con las lluvias extremas, según las
-                condiciones de la póliza.
+                cubrir parte de los daños materiales ocasionados por estos eventos,
+                según las condiciones de la póliza.
             </p>
         </div>
     </section>
-    <!-- CONSECUENCIAS SOCIALES -->
     <section class="consequences" id="consecuencias">
         <h2 class="section-title">
             Consecuencias sociales
@@ -371,7 +371,6 @@
             </li>
         </ul>
     </section>
-    <!-- CONSECUENCIAS ECONÓMICAS -->
     <section class="economic">
         <h2 class="section-title">
             Consecuencias económicas
@@ -394,7 +393,6 @@
             </li>
         </ul>
     </section>
-    <!-- PREVENCIÓN -->
     <section class="prevention" id="prevencion">
         <h2 class="section-title">
             Prevención
@@ -402,19 +400,16 @@
         <div class="content">
             <p>
                 La prevención ayuda a que las inundaciones y los deslizamientos
-                causen menos daños. Si las personas limpian los caños y ríos,
-                no construyen en lugares peligrosos, siembran árboles y siguen
-                las alertas de emergencia, pueden evitar muchos problemas.
+                causen menos daños. Limpiar los caños y ríos, no construir en
+                lugares peligrosos, sembrar árboles y seguir las alertas de
+                emergencia puede ayudar a evitar muchos problemas.
             </p>
             <p>
                 También es importante tener un plan de evacuación y saber qué
-                hacer cuando llueve muy fuerte. Con estas acciones se pueden
-                proteger las personas, las casas y la comunidad, y reducir
-                los riesgos.
+                hacer cuando llueve muy fuerte.
             </p>
         </div>
     </section>
-    <!-- PRÁCTICAS SOSTENIBLES -->
     <section class="sustainable" id="sostenibles">
         <h2 class="section-title">
             Prácticas sostenibles
@@ -422,30 +417,27 @@
         <ul>
             <li>
                 <strong>Limpieza comunitaria de cauces y ríos:</strong>
-                Organizar jornadas para recolectar basura y evitar la acumulación
-                de desechos en caños y desagües que obstruyan el paso del agua.
+                Recolectar basura y evitar que los desechos obstruyan
+                el paso del agua.
             </li>
             <li>
-                <strong>Reforestación y siembra de árboles:</strong>
-                Plantar vegetación en zonas vulnerables y pendientes para devolverle
-                estabilidad al suelo y reducir el riesgo de deslizamientos.
+                <strong>Reforestación:</strong>
+                Plantar árboles en zonas vulnerables para ayudar a estabilizar
+                el suelo.
             </li>
             <li>
-                <strong>Uso responsable del suelo y construcción consciente:</strong>
-                Evitar la edificación o el desarrollo urbano en terrenos de alto riesgo
-                o laderas inestables.
+                <strong>Uso responsable del suelo:</strong>
+                Evitar construir en terrenos de alto riesgo o laderas inestables.
             </li>
             <li>
                 <strong>Manejo adecuado de residuos:</strong>
-                Reducir la contaminación ambiental asegurando que la basura no termine
-                en las fuentes hídricas de la comunidad.
+                Evitar que la basura llegue a los ríos y fuentes de agua.
             </li>
         </ul>
     </section>
-    <!-- COMPARACIÓN -->
     <section class="comparison" id="comparacion">
         <h2 class="section-title">
-            ¿Estás preparado para un desastre?
+            ¿Estar asegurado o no estar asegurado?
         </h2>
         <div class="comparison-container">
             <div class="comparison-card">
@@ -454,17 +446,17 @@
                 </h3>
                 <ul>
                     <li>
-                        Posible apoyo económico para reparar daños,
-                        según las condiciones de la póliza.
+                        Puede ayudar a cubrir parte de los daños,
+                        según la póliza.
                     </li>
                     <li>
-                        Mayor preparación ante situaciones inesperadas.
+                        Reduce el impacto económico de reparaciones costosas.
                     </li>
                     <li>
-                        Protección de parte de tus bienes y vivienda.
+                        Ayuda a proteger el patrimonio familiar.
                     </li>
                     <li>
-                        Mayor tranquilidad para tu familia.
+                        Brinda mayor tranquilidad.
                     </li>
                 </ul>
             </div>
@@ -474,113 +466,234 @@
                 </h3>
                 <ul>
                     <li>
-                        La familia debe asumir todos los costos de reparación.
+                        La familia debe pagar los daños por su cuenta.
                     </li>
                     <li>
-                        Los daños pueden causar grandes pérdidas económicas.
+                        Las reparaciones pueden ser muy costosas.
                     </li>
                     <li>
-                        Puede ser más difícil recuperar los bienes perdidos.
+                        Puede ser más difícil recuperarse económicamente.
                     </li>
                     <li>
-                        Los gastos inesperados pueden afectar la economía familiar.
+                        Los gastos inesperados pueden afectar a la familia.
                     </li>
                 </ul>
             </div>
         </div>
     </section>
-    <!-- ARGUMENTOS FINANCIEROS -->
     <section class="financial">
         <h2 class="section-title">
-            Protege tu economía
+            Argumentos financieros
         </h2>
         <div class="content">
             <p>
-                Una inundación o un deslizamiento puede causar daños costosos
-                en una vivienda, un vehículo o diferentes pertenencias. Los
-                gastos de reparación pueden representar una gran carga económica
-                para una familia.
+                Los daños causados por inundaciones, tormentas y deslizamientos
+                pueden generar gastos muy altos para una familia.
             </p>
             <p>
-                Contar con un seguro de vivienda puede ayudar a cubrir parte
-                de los daños materiales ocasionados por estos eventos, siempre
-                de acuerdo con las condiciones y coberturas establecidas en
-                la póliza.
+                Pagar una mensualidad simulada puede ser una forma de prepararse
+                para reducir el impacto de gastos inesperados después de un desastre.
             </p>
             <p>
-                Prepararse con anticipación puede ser una decisión financiera
-                responsable para reducir el impacto económico de una emergencia.
+                Sin embargo, las coberturas dependen de las condiciones establecidas
+                en cada póliza.
             </p>
         </div>
     </section>
-    <!-- LLAMADO A LA ACCIÓN -->
-    <section class="action" id="accion">
+    <section class="action">
         <h2 class="section-title">
-            Llamado a la acción para la comunidad
+            Llamado a la acción
         </h2>
         <ul>
             <li>
-                <strong>Prepara tu plan familiar de emergencia:</strong>
-                Elabora junto a tu familia un plan de evacuación claro hacia
-                refugios o zonas seguras ante alertas por lluvias intensas.
+                Prepara un plan familiar de emergencia.
             </li>
             <li>
-                <strong>Mantente informado y alerta:</strong>
-                Sigue atentamente los reportes meteorológicos y las alertas
-                oficiales emitidas por los cuerpos de emergencia.
+                Mantente informado sobre las alertas oficiales.
             </li>
             <li>
-                <strong>Cuida tu entorno:</strong>
-                No arrojes basura en la calle ni en los ríos; la prevención
-                del riesgo es una responsabilidad de todos.
+                No arrojes basura en las calles ni en los ríos.
+            </li>
+            <li>
+                Limpia los desagües y cuida tu entorno.
             </li>
         </ul>
     </section>
-    <!-- CONTACTO -->
+    <section id="seguros">
+        <h2 class="section-title">
+            Conoce nuestros seguros
+        </h2>
+        <div class="insurance-container">
+            <div class="insurance-card">
+                <h3>
+                    Protecasa
+                </h3>
+                <p>
+                    <strong>Tipo:</strong>
+                    Seguro de vivienda.
+                </p>
+                <p>
+                    <strong>Riesgo que atiende:</strong>
+                    Lluvias fuertes, inundaciones, deslizamientos y tormentas.
+                </p>
+                <p>
+                    <strong>Dirigido a:</strong>
+                    Personas y familias que quieren proteger su hogar.
+                </p>
+                <h3>
+                    ¿Qué cubre?
+                </h3>
+                <ul>
+                    <li>
+                        Reparación del techo, paredes y pisos.
+                    </li>
+                    <li>
+                        Daños por inundaciones y deslizamientos.
+                    </li>
+                    <li>
+                        Daños en puertas, ventanas e instalación eléctrica.
+                    </li>
+                    <li>
+                        Limpieza después de una emergencia.
+                    </li>
+                </ul>
+                <h3>
+                    ¿Qué no cubre?
+                </h3>
+                <ul>
+                    <li>
+                        Daños por falta de mantenimiento.
+                    </li>
+                    <li>
+                        Joyas, dinero u objetos de mucho valor.
+                    </li>
+                    <li>
+                        Daños hechos a propósito.
+                    </li>
+                </ul>
+                <p>
+                    <strong>Precio simulado:</strong>
+                </p>
+                <div class="price">
+                    ₡10 000 al mes
+                </div>
+                <p>
+                    Protege la casa, ayuda a ahorrar dinero en reparaciones
+                    y brinda apoyo ante un desastre natural.
+                </p>
+                <p>
+                    <strong>Recomendación sostenible:</strong>
+                    Mantén limpios los desagües, no tires basura en ríos
+                    o alcantarillas y siembra árboles.
+                </p>
+                <div class="persuasive-message">
+                    “Con Protecasa, tu hogar y tu familia estarán mejor protegidos.
+                    Prepárate hoy para enfrentar los efectos del cambio climático
+                    con más tranquilidad.”
+                </div>
+            </div>
+            <div class="insurance-card">
+                <h3>
+                    EcoProtección Hogar
+                </h3>
+                <p>
+                    <strong>Tipo:</strong>
+                    Seguro para vivienda y desastres naturales.
+                </p>
+                <p>
+                    <strong>Riesgo que atiende:</strong>
+                    Inundaciones, tormentas, deslizamientos de tierra y fuertes
+                    vientos relacionados con el cambio climático.
+                </p>
+                <p>
+                    <strong>Dirigido a:</strong>
+                    Familias y personas propietarias de una casa o apartamento.
+                </p>
+                <h3>
+                    ¿Qué cubre?
+                </h3>
+                <ul>
+                    <li>
+                        Reparación de la vivienda por daños climáticos.
+                    </li>
+                    <li>
+                        Reposición de muebles y electrodomésticos dañados.
+                    </li>
+                    <li>
+                        Gastos de alojamiento temporal.
+                    </li>
+                    <li>
+                        Asistencia de emergencia las 24 horas.
+                    </li>
+                </ul>
+                <h3>
+                    ¿Qué no cubre?
+                </h3>
+                <ul>
+                    <li>
+                        Daños provocados intencionalmente.
+                    </li>
+                    <li>
+                        Falta de mantenimiento de la vivienda.
+                    </li>
+                    <li>
+                        Objetos de lujo no declarados.
+                    </li>
+                    <li>
+                        Daños ocurridos antes de contratar el seguro.
+                    </li>
+                </ul>
+                <p>
+                    <strong>Precio simulado:</strong>
+                </p>
+                <div class="price">
+                    ₡12 500 al mes
+                </div>
+                <p>
+                    Brinda tranquilidad, ayuda a recuperarse después de un desastre
+                    y protege el patrimonio familiar.
+                </p>
+                <p>
+                    <strong>Recomendación sostenible:</strong>
+                    Instala sistemas de recolección de agua de lluvia, siembra
+                    árboles, limpia los desagües y ahorra energía y agua.
+                </p>
+                <div class="persuasive-message">
+                    “El clima está cambiando y los eventos extremos son cada vez
+                    más frecuentes. Con EcoProtección Hogar, usted protege a su
+                    familia y su vivienda frente a situaciones inesperadas.”
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contact" id="contacto">
-<h2 class="section-title">
-    Protege tu futuro
-</h2>
-<p>
-    Completa el siguiente formulario para solicitar una cotización ficticia.
-</p>
-<form id="quote-form">
-    <input
-        type="text"
-        id="name"
-        placeholder="Tu nombre"
-        required
-    >
-    <input
-        type="email"
-        id="email"
-        placeholder="Tu correo electrónico"
-        required
-    >
-    <select id="insurance" required>
-        <option value="">
-            Selecciona un tipo de seguro
-        </option>
-        <option value="vivienda">
-            Seguro para vivienda
-        </option>
-        <option value="inundaciones">
-            Protección contra inundaciones
-        </option>
-        <option value="deslizamientos">
-            Protección contra deslizamientos
-        </option>
-    </select>
-    <button
-        type="submit"
-        class="button"
-    >
-        COTIZA TU SEGURO
-    </button>
-</form>
-<div id="quote-result"></div>
-</section>
-    <!-- MENSAJE FINAL -->
+        <h2 class="section-title">
+            Cotiza tu seguro
+        </h2>
+        <p>
+            Selecciona uno de nuestros seguros para obtener una cotización mensual simulada.
+        </p>
+        <div class="quote-box">
+            <select id="insurance-select">
+                <option value="">
+                    Selecciona un seguro
+                </option>
+                <option value="protecasa">
+                    Protecasa - ₡10 000 al mes
+                </option>
+                <option value="eco">
+                    EcoProtección Hogar - ₡12 500 al mes
+                </option>
+            </select>
+            <button
+                class="button"
+                onclick="showQuote()"
+            >
+                COTIZA TU SEGURO
+            </button>
+            <p id="quote-message"></p>
+        </div>
+    </section>
     <section class="final-message">
         <h2>
             Prepárate hoy para proteger el mañana.
@@ -592,7 +705,6 @@
         </p>
     </section>
 </main>
-<!-- PIE DE PÁGINA -->
 <footer>
     <p>
         © 2026 ProtegeFuturo Seguros
@@ -601,7 +713,6 @@
         Proyecto educativo ficticio
     </p>
 </footer>
-<!-- JAVASCRIPT -->
 <script>
     function scrollToCompany() {
         document
@@ -610,11 +721,27 @@
                 behavior: "smooth"
             });
     }
-    function showMessage() {
-        document
-            .getElementById("contact-message")
-            .textContent =
-            "¡Gracias por tu interés! Esta es una sección ficticia de cotización. En una aseguradora real, aquí podrías solicitar información sobre las coberturas disponibles.";
+    function showQuote() {
+        const selectedInsurance =
+            document
+                .getElementById("insurance-select")
+                .value;
+        const message =
+            document
+                .getElementById("quote-message");
+        if (selectedInsurance === "") {
+            message.textContent =
+                "Por favor, selecciona uno de los seguros antes de cotizar.";
+            return;
+        }
+        if (selectedInsurance === "protecasa") {
+            message.textContent =
+                "¡Gracias por elegir Protecasa! Tu mensualidad simulada sería de ₡10 000 al mes. Esta cotización es ficticia y forma parte de un proyecto educativo.";
+        }
+        if (selectedInsurance === "eco") {
+            message.textContent =
+                "¡Gracias por elegir EcoProtección Hogar! Tu mensualidad simulada sería de ₡12 500 al mes. Esta cotización es ficticia y forma parte de un proyecto educativo.";
+        }
     }
 </script>
 </body>
