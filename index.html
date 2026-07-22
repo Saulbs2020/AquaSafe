@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greek Odyssey Travel</title>
+<title>Prevención de Inundaciones y Deslizamientos</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 <style>
     * {
@@ -27,18 +27,18 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 50px;
-        background: rgba(7, 17, 31, 0.85);
+        background: rgba(7, 17, 31, 0.9);
         backdrop-filter: blur(10px);
     }
     .logo {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 600;
     }
     nav a {
         color: white;
         text-decoration: none;
-        margin-left: 25px;
-        font-size: 14px;
+        margin-left: 20px;
+        font-size: 13px;
     }
     nav a:hover {
         color: #5bc0be;
@@ -50,23 +50,23 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 100px 20px;
+        padding: 120px 20px 80px;
         background:
             linear-gradient(
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.7)
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.8)
             ),
-            url("https://images.unsplash.com/photo-1530841377377-3ff06c0ca713")
+            url("https://images.unsplash.com/photo-1547683905-f686c993aae5")
             center/cover;
     }
     .hero h1 {
-        font-size: clamp(40px, 8vw, 80px);
+        font-size: clamp(35px, 7vw, 70px);
         margin: 0 0 20px;
     }
     .hero p {
-        max-width: 600px;
+        max-width: 750px;
         font-size: 18px;
-        line-height: 1.7;
+        line-height: 1.8;
     }
     .button {
         margin-top: 25px;
@@ -76,9 +76,8 @@
         background: #5bc0be;
         color: white;
         font-family: 'Orbitron', sans-serif;
-        font-size: 14px;
         cursor: pointer;
-        transition: transform 0.2s, background 0.2s;
+        transition: 0.3s;
     }
     .button:hover {
         background: #3aafa9;
@@ -89,56 +88,68 @@
     }
     .section-title {
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 45px;
     }
-    .destinations {
+    .content {
+        max-width: 950px;
+        margin: auto;
+    }
+    .content p {
+        color: #c2cedb;
+        line-height: 1.9;
+        font-size: 16px;
+    }
+    .cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
     }
     .card {
-        overflow: hidden;
+        padding: 25px;
         border-radius: 15px;
         background: #101d30;
         transition: transform 0.3s;
     }
     .card:hover {
-        transform: translateY(-10px);
-    }
-    .card img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-    }
-    .card-content {
-        padding: 20px;
+        transform: translateY(-8px);
     }
     .card h3 {
-        margin-top: 0;
+        color: #5bc0be;
     }
     .card p {
-        color: #b7c4d6;
-        line-height: 1.6;
+        color: #c2cedb;
+        line-height: 1.7;
     }
-    .prevention {
-        text-align: center;
-        background: #14263d;
-    }
-    .prevention p {
-        max-width: 800px;
-        margin: 20px auto;
-        line-height: 1.8;
-        color: #b7c4d6;
-    }
-    .about {
-        text-align: center;
+    .climate {
         background: #0d1929;
     }
-    .about p {
-        max-width: 700px;
+    .consequences {
+        background: #14263d;
+    }
+    .economic {
+        background: #0d1929;
+    }
+    .prevention {
+        background: #14263d;
+    }
+    ul {
+        max-width: 850px;
         margin: auto;
-        line-height: 1.8;
-        color: #b7c4d6;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        background: #101d30;
+        margin: 15px 0;
+        padding: 18px 25px;
+        border-radius: 10px;
+        color: #c2cedb;
+        line-height: 1.6;
+    }
+    li::before {
+        content: "✓ ";
+        color: #5bc0be;
+        font-weight: bold;
     }
     footer {
         padding: 30px;
@@ -146,13 +157,18 @@
         background: #050b14;
         color: #8795a8;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
         header {
-            padding: 20px;
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
         }
         nav a {
-            margin-left: 10px;
-            font-size: 11px;
+            margin: 0 5px;
+            font-size: 10px;
+        }
+        section {
+            padding: 80px 6%;
         }
     }
 </style>
@@ -160,108 +176,147 @@
 <body>
 <header>
     <div class="logo">
-        GREEK ODYSSEY
+        PREVENCIÓN Y SEGURIDAD
     </div>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#destinations">Destinations</a>
-        <a href="#prevention">Prevención</a>
-        <a href="#about">About</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#problema">Problema</a>
+        <a href="#clima">Cambio Climático</a>
+        <a href="#consecuencias">Consecuencias</a>
+        <a href="#prevencion">Prevención</a>
     </nav>
 </header>
 <main>
-    <section class="hero" id="home">
+    <section class="hero" id="inicio">
         <h1>
-            Discover Greece
+            Inundaciones y Deslizamientos
         </h1>
         <p>
-            Journey through ancient history, breathtaking islands,
-            crystal-clear waters, and unforgettable adventures.
+            Conocer los riesgos y aprender a prevenirlos puede ayudar
+            a proteger a las personas, las viviendas y las comunidades.
         </p>
-        <button class="button" onclick="scrollToDestinations()">
-            EXPLORE DESTINATIONS
+        <button class="button" onclick="scrollToProblem()">
+            CONOCER MÁS
         </button>
     </section>
-    <section id="destinations">
+    <section id="problema">
         <h2 class="section-title">
-            Popular Destinations
+            ¿Qué son las inundaciones y los deslizamientos?
         </h2>
-        <div class="destinations">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb">
-                <div class="card-content">
-                    <h3>
-                        Santorini
-                    </h3>
-                    <p>
-                        Famous for its white buildings, blue domes,
-                        and incredible sunsets over the Aegean Sea.
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1603565816030-6b389eeb23cb">
-                <div class="card-content">
-                    <h3>
-                        Athens
-                    </h3>
-                    <p>
-                        Explore the birthplace of democracy and walk
-                        among thousands of years of ancient history.
-                    </p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077">
-                <div class="card-content">
-                    <h3>
-                        Mykonos
-                    </h3>
-                    <p>
-                        Enjoy beautiful beaches, lively streets,
-                        and the unique atmosphere of this famous island.
-                    </p>
-                </div>
-            </div>
+        <div class="content">
+            <p>
+                Las inundaciones y los deslizamientos son problemas ambientales
+                causados principalmente por lluvias intensas y cambios en el clima.
+                Cuando llueve demasiado, los ríos pueden desbordarse y el suelo puede
+                perder estabilidad, provocando deslizamientos de tierra.
+            </p>
+            <p>
+                Estos fenómenos pueden causar daños en viviendas, carreteras,
+                ecosistemas y poner en riesgo la vida de las personas. Además,
+                la contaminación y la acumulación de basura pueden afectar los ríos
+                y empeorar estos problemas.
+            </p>
         </div>
     </section>
-    <section class="prevention" id="prevention">
+    <section class="climate" id="clima">
         <h2 class="section-title">
-            Prevención y Seguridad
+            Cambio climático y lluvias intensas
         </h2>
-        <p>
-            La prevención ayuda a que las inundaciones y los deslizamientos
-            causen menos daños. Si las personas limpian los caños y ríos,
-            no construyen en lugares peligrosos, siembran árboles y siguen
-            las alertas de emergencia, pueden evitar muchos problemas.
-        </p>
-        <p>
-            También es importante tener un plan de evacuación y saber qué
-            hacer cuando llueve muy fuerte. Con estas acciones se pueden
-            proteger las personas, las casas y la comunidad, y reducir
-            los riesgos.
-        </p>
+        <div class="content">
+            <p>
+                El cambio climático ha provocado que las lluvias intensas sean
+                más frecuentes y fuertes. Estas precipitaciones pueden causar
+                inundaciones, desbordamiento de ríos y deslizamientos de tierra,
+                lo que daña viviendas, carreteras, cultivos e infraestructura.
+            </p>
+            <p>
+                En muchos casos, las familias deben desplazarse de sus hogares
+                porque las zonas afectadas dejan de ser seguras o porque sus casas
+                quedan destruidas. Estos desplazamientos pueden ser temporales o
+                permanentes y generan pérdidas económicas, problemas de salud y
+                dificultades para acceder a servicios básicos.
+            </p>
+            <p>
+                Por esta razón, contar con un seguro de vivienda puede ayudar a
+                cubrir parte de los daños materiales ocasionados por las inundaciones
+                y otros eventos relacionados con las lluvias extremas, según las
+                condiciones de la póliza.
+            </p>
+        </div>
     </section>
-    <section class="about" id="about">
+    <section class="consequences" id="consecuencias">
         <h2 class="section-title">
-            Your Odyssey Awaits
+            Consecuencias sociales
         </h2>
-        <p>
-            Greece is more than just a destination.
-            It is a journey through mythology, history, culture,
-            and some of the most beautiful landscapes in the world.
-        </p>
+        <ul>
+            <li>
+                Pérdida de viviendas y pertenencias.
+            </li>
+            <li>
+                Desplazamiento de familias a refugios o zonas más seguras.
+            </li>
+            <li>
+                Interrupción de las clases y del trabajo.
+            </li>
+            <li>
+                Aumento del riesgo de enfermedades por el agua contaminada.
+            </li>
+            <li>
+                Estrés, ansiedad y afectación del bienestar de las personas.
+            </li>
+        </ul>
+    </section>
+    <section class="economic">
+        <h2 class="section-title">
+            Consecuencias económicas
+        </h2>
+        <ul>
+            <li>
+                Altos costos para reparar viviendas, carreteras y puentes.
+            </li>
+            <li>
+                Pérdidas de cultivos, ganado y otros bienes.
+            </li>
+            <li>
+                Disminución de los ingresos de las familias afectadas.
+            </li>
+            <li>
+                Gastos del gobierno en atención de emergencias y reconstrucción.
+            </li>
+            <li>
+                Afectación al comercio y al turismo en las zonas dañadas.
+            </li>
+        </ul>
+    </section>
+    <section class="prevention" id="prevencion">
+        <h2 class="section-title">
+            Prevención
+        </h2>
+        <div class="content">
+            <p>
+                La prevención ayuda a que las inundaciones y los deslizamientos
+                causen menos daños. Si las personas limpian los caños y ríos,
+                no construyen en lugares peligrosos, siembran árboles y siguen
+                las alertas de emergencia, pueden evitar muchos problemas.
+            </p>
+            <p>
+                También es importante tener un plan de evacuación y saber qué
+                hacer cuando llueve muy fuerte. Con estas acciones se pueden
+                proteger las personas, las casas y la comunidad, y reducir
+                los riesgos.
+            </p>
+        </div>
     </section>
 </main>
 <footer>
     <p>
-        © 2026 Greek Odyssey Travel
+        © 2026 Prevención de Inundaciones y Deslizamientos
     </p>
 </footer>
 <script>
-    function scrollToDestinations() {
+    function scrollToProblem() {
         document
-            .getElementById("destinations")
+            .getElementById("problema")
             .scrollIntoView({
                 behavior: "smooth"
             });
